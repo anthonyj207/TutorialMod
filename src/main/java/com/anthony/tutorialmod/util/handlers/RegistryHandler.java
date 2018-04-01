@@ -17,6 +17,7 @@ public class RegistryHandler {
 		event.getRegistry().registerAll(ItemInit.ITEMS.toArray(new Item[0]));
 	}
 	
+	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event) {
 		for (Item item : ItemInit.ITEMS) {
 			if (item instanceof IHasModel) {
